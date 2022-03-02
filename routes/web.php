@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 
 $navlist = [
-    '/' => 'Home',
-    'chi-siamo' => 'Chi siamo',
+    'home' => 'Home',
+    'chi_siamo' => 'Chi siamo',
     'contatti' => 'Contatti',
     'blog' => 'Blog'
 ];
 
-Route::view('/', 'home', ['navList' => $navlist]);
-Route::view('chi-siamo', 'chi-siamo', ['navList' => $navlist]);
-Route::view('contatti', 'contatti', ['navList' => $navlist]);
-Route::view('blog', 'blog', ['navList' => $navlist]);
+Route::view('/', 'home', ['navList' => $navlist])->name('home');
+Route::view('/chi-siamo', 'chi-siamo', ['navList' => $navlist])->name('chi_siamo');
+Route::view('/contatti', 'contatti', ['navList' => $navlist])->name('contatti');
+Route::view('/blog', 'blog', ['navList' => $navlist])->name('blog');

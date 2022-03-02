@@ -8,7 +8,7 @@
             <ul class="navbar-nav">
                 @foreach($navList as $key => $navItem)
                     <li class="nav-item active">
-                        <a class="nav-link" href="{{$key}}">{{$navItem}}</a>
+                        <a class="nav-link" href="{{ route($key) }}">{{$navItem}}</a>
                     </li>
                 @endforeach
             </ul>
