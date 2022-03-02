@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+$navlist = [
+    '/' => 'Home',
+    'chi-siamo' => 'Chi siamo',
+    'contatti' => 'Contatti',
+    'blog' => 'Blog'
+];
+
+Route::view('/', 'home', ['navList' => $navlist]);
+Route::view('chi-siamo', 'chi-siamo', ['navList' => $navlist]);
+Route::view('contatti', 'contatti', ['navList' => $navlist]);
+Route::view('blog', 'blog', ['navList' => $navlist]);
