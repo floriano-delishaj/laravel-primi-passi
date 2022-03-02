@@ -12,17 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
-$navlist = [
-    'home' => 'Home',
-    'chi_siamo' => 'Chi siamo',
-    'contatti' => 'Contatti',
-    'blog' => 'Blog'
+$params = [
+    'navList' => [
+        'home' => 'Home',
+        'chi_siamo' => 'Chi siamo',
+        'contatti' => 'Contatti',
+        'blog' => 'Blog'
+    ]
 ];
 
-Route::view('/', 'home', ['navList' => $navlist])->name('home');
-Route::view('/chi-siamo', 'chi-siamo', ['navList' => $navlist])->name('chi_siamo');
-Route::view('/contatti', 'contatti', ['navList' => $navlist])->name('contatti');
-Route::view('/blog', 'blog', ['navList' => $navlist])->name('blog');
+Route::view('/', 'home',$params)->name('home');
+Route::view('/chi-siamo', 'chi-siamo', $params)->name('chi_siamo');
+Route::view('/contatti', 'contatti', $params)->name('contatti');
+Route::view('/blog', 'blog', $params)->name('blog');

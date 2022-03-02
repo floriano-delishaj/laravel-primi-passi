@@ -13,5 +13,7 @@
 
 @include('components.nav-bar');
 
+<h1 class="text-center">Home</h1>
+
 </body>
 </html>

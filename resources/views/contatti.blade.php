@@ -13,5 +13,7 @@
 
 @include('components.nav-bar');
 
+<h1 class="text-center">Contatti</h1>
+
 </body>
 </html>
