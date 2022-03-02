@@ -22,6 +22,7 @@
                 @foreach($navList as $key => $navItem)
                     <li class="nav-item active">
                         <a class="nav-link" href="{{$key}}">{{$navItem}}</a>
+                    </li>
                 @endforeach
             </ul>
         </div>

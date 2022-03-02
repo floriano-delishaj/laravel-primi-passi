@@ -22,7 +22,7 @@ $navlist = [
     'blog' => 'Blog'
 ];
 
-Route::view('/', 'home', ['navList' => $navlist]);
+Route::view('/', 'home',  ['navList' => $navlist]);
 Route::view('chi-siamo', 'chi-siamo', ['navList' => $navlist]);
 Route::view('contatti', 'contatti', ['navList' => $navlist]);
 Route::view('blog', 'blog', ['navList' => $navlist]);
